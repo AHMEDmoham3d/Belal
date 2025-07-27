@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة مدرب الكاراتيه | Karate Master</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="particles-container" id="particles-js"></div>
+  
+  <div class="app-container">
+    <div class="karate-logo animate__animated animate__fadeInDown">
+      <div class="logo-icon animate__animated animate__pulse animate__infinite">
+        <img src="logo.jpg" height="160">
+      </div>
+      <h1>BAHGAT FIGHTERS</h1>
+      <div class="logo-subtitle">نظام متكامل لمتابعة اللاعبين</div>
+    </div>
+
+    <div class="main-card animate__animated animate__fadeIn" id="loginCard">
+      <div class="card-header">
+        <i class="fas fa-user-shield"></i>
+        <h2>تسجيل الدخول</h2>
+      </div>
+      <div class="card-body">
+        <div class="input-group animate__animated">
+          <i class="fas fa-id-card"></i>
+          <input type="text" id="playerId" placeholder="أدخل المعرف الخاص بك">
+        </div>
+        <button class="action-btn animate__animated animate__pulse" onclick="login()">
+          <i class="fas fa-sign-in-alt"></i> دخول للنظام
+        </button>
+      </div>
+    </div>
+
+    <div class="main-card profile-card" id="profileCard" style="display:none;">
+      <div class="profile-header animate__animated">
+        <div class="avatar-container">
+          <div class="avatar-circle">
+            <i class="fas fa-user-ninja"></i>
+          </div>
+          <div class="rank-badge" id="rankBadge">
+            <span id="playerRank"></span>
+          </div>
+        </div>
+        <h2 id="playerName"></h2>
+        <div class="belt-level">
+          <div class="belt-progress" id="beltProgress"></div>
+          <span>الحزام بنى 1</span>
+        </div>
+      </div>
+
+      <div class="stats-container animate__animated">
+        <div class="stat-item">
+          <div class="stat-icon points-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="playerPoints">0</div>
+            <div class="stat-label">النقاط</div>
+          </div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-icon absences-icon">
+            <i class="fas fa-calendar-times"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-value" id="playerAbsences">0</div>
+            <div class="stat-label">الغيابات</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-container animate__animated">
+        <h3>تقدم الأسبوع</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="weekProgress"></div>
+        </div>
+        <div class="progress-labels">
+          <span>0%</span>
+          <span>50%</span>
+          <span>100%</span>
+        </div>
+      </div>
+
+      <div class="quick-actions animate__animated">
+        <!-- <button class="action-btn small-btn" onclick="addPoints()">
+          <i class="fas fa-plus"></i> إضافة نقاط
+        </button>
+        <button class="action-btn small-btn" onclick="addAbsence()">
+          <i class="fas fa-minus"></i> تسجيل غياب
+        </button> -->
+      </div>
+
+      <div class="resources-section animate__animated">
+        <h3 class="section-title">
+          <i class="fas fa-book-open"></i>المنشورات 
+        </h3>
+        <div class="resources-grid">
+          <div class="resource-item" onclick="openResource('kata')">
+            <div class="resource-icon kata-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <span>تمارين الكاتا</span>
+          </div>
+          <div class="resource-item" onclick="openResource('kihon')">
+            <div class="resource-icon kihon-icon">
+              <i class="fas fa-hands"></i>
+            </div>
+            <span>أساسيات الكيهون</span>
+          </div>
+          <div class="resource-item" onclick="openResource('kumite')">
+            <div class="resource-icon kumite-icon">
+              <i class="fas fa-people-arrows"></i>
+            </div>
+            <span>تمارين الكوميتيه</span>
+          </div>
+          <div class="resource-item" onclick="openResource('rules')">
+            <div class="resource-icon rules-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <span>قواعد البطولات</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="logout-btn animate__animated" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" style="display:none;">
+    <div class="modal-box animate__animated" id="modalBox">
+      <div class="modal-icon" id="modalIcon">
+        <i class="fas fa-exclamation"></i>
+      </div>
+      <h3 class="modal-title" id="modalTitle">تنبيه</h3>
+      <p class="modal-message" id="modalMessage"></p>
+      <button class="modal-btn" onclick="closeModal()">موافق</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

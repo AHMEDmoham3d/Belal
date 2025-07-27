@@ -1,0 +1,595 @@
+:root {
+  --primary-color: #e63946;
+  --primary-dark: #c1121f;
+  --secondary-color: #1d3557;
+  --accent-color: #f77f00;
+  --light-color: #f1faee;
+  --dark-color: #1a1a2e;
+  --text-color: #2b2d42;
+  --text-light: #8d99ae;
+  --success-color: #2a9d8f;
+  --warning-color: #e9c46a;
+  --error-color: #e63946;
+  --belt-white: #f8f9fa;
+  --belt-yellow: #ffd166;
+  --belt-orange: #f77f00;
+  --belt-green: #06d6a0;
+  --belt-blue: #118ab2;
+  --belt-brown: #6f4518;
+  --belt-black: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.app-container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.karate-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.logo-icon {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(247, 127, 0, 0.5);
+}
+
+.karate-logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.logo-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.main-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-header i {
+  font-size: 1.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+  background-color: white;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.action-btn i {
+  font-size: 1.1rem;
+}
+
+.small-btn {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+.profile-card {
+  position: relative;
+}
+
+.profile-header {
+  text-align: center;
+  padding: 30px 20px 20px;
+  background: linear-gradient(135deg, var(--secondary-color), #0f3460);
+  color: white;
+}
+
+.avatar-container {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 15px;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rank-badge {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--accent-color), #fcbf49);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 10px rgba(247, 127, 0, 0.3);
+  border: 2px solid white;
+}
+
+.profile-header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.belt-level {
+  margin-top: 15px;
+}
+
+.belt-progress {
+  height: 10px;
+  background: var(--belt-white);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.belt-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: var(--belt-yellow);
+  transition: width 1s ease;
+}
+
+.belt-level span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.points-icon {
+  background: linear-gradient(135deg, var(--success-color), #06d6a0);
+}
+
+.absences-icon {
+  background: linear-gradient(135deg, var(--error-color), #e63946);
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.progress-container {
+  padding: 0 20px 20px;
+}
+
+.progress-container h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 5px;
+  transition: width 1s ease;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 0 20px 20px;
+}
+
+.resources-section {
+  padding: 20px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.resource-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: white;
+  margin: 0 auto 10px;
+}
+
+.kata-icon {
+  background: linear-gradient(135deg, #3a86ff, #4361ee);
+}
+
+.kihon-icon {
+  background: linear-gradient(135deg, #7209b7, #560bad);
+}
+
+.kumite-icon {
+  background: linear-gradient(135deg, #f72585, #b5179e);
+}
+
+.rules-icon {
+  background: linear-gradient(135deg, #4cc9f0, #4895ef);
+}
+
+.resource-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.logout-btn {
+  width: calc(100% - 40px);
+  margin: 0 20px 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #f8f9fa;
+  color: var(--error-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logout-btn:hover {
+  background: #f1f1f1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-box {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--error-color);
+  margin: 0 auto 20px;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.modal-message {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+.modal-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 15px;
+  }
+  
+  .karate-logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .logo-icon {
+    font-size: 3rem;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .stat-value {
+    font-size: 1.1rem;
+  }
+}
+/* تنسيق جدول إحصائيات اللاعبين */
+.all-players-stats {
+  padding: 20px;
+}
+
+.stats-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stats-table th, 
+.stats-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.stats-table th {
+  background: linear-gradient(135deg, var(--secondary-color), #0f3460);
+  color: white;
+  font-weight: 500;
+}
+
+.stats-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.stats-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 480px) {
+  .stats-table th, 
+  .stats-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
