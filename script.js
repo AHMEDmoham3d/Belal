@@ -12,7 +12,7 @@ const playersData = {
   'malak010': { name: 'ملك محمود السيد', points: 0, absences: 0, rank: 10 },
   'iten011': { name: 'إيتن فتحي', points: 0, absences: 0, rank: 11 },
   'mohamed012': { name: 'محمد عبد التام', points: 0, absences: 0, rank: 12 },
-  'farah013': { name: 'فرح عادل', points: 150, absences: 0, rank: 13 },
+  'farah013': { name: 'فرح عادل', points: 0, absences: 0, rank: 13 },
   'nada014': { name: 'ندى أنور', points: 0, absences: 0, rank: 14 },
   'noreen015': { name: 'نورين محمود', points: 0, absences: 0, rank: 15 },
   'sama016': { name: 'سما وليد', points: 0, absences: 0, rank: 16 },
